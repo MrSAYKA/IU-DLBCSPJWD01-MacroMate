@@ -11,6 +11,9 @@ const emoji = ref('🤩')
 function increment() {
   count.value++
 }
+function decrement() {
+  count.value--
+}
 
 // lifecycle hooks
 onMounted(() => {
@@ -20,7 +23,9 @@ onMounted(() => {
 
 <template>
   <header>
-  <button @click="increment">Count is: {{ count }}</button>
+    <h1> count is: {{count}}</h1>
+  <button @click="increment">add</button>
+    <button @click="decrement">minus</button>
     <span> {{emoji}} </span>
     <div>
       <h1>Hello my name is {{ name }}!</h1>
